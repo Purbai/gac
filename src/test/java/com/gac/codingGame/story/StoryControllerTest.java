@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class StoryControllerTest {
 
     @Autowired
-    private StoryContoller storyContoller;
+    private StoryController storyController;
 
     @Autowired
     private StoryRepository storyRepository;
@@ -31,7 +31,7 @@ class StoryControllerTest {
 
         Mockito.when(storyService.findById(1L)).thenReturn(Optional.of(story));
 
-        Optional<Story> result = storyContoller.findById(1L);
+        Optional<Story> result = storyController.findById(1L);
 
         assertTrue(result.isPresent());
         assertEquals("Hello world", result.get().getStoryText());
