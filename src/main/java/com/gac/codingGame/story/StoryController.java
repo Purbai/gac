@@ -11,10 +11,10 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/story")
-public class StoryContoller {
+public class StoryController {
     public final StoryService storyService;
 
-    public StoryContoller(StoryService storyService) {
+    public StoryController(StoryService storyService) {
         this.storyService = storyService;
     }
 
