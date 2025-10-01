@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Order(1)
-public class DataSeeder implements CommandLineRunner {
+public class StoryDataSeeder implements CommandLineRunner {
     private final StoryRepository storyRepository;
 
-    public DataSeeder(StoryRepository storyRepository) {
+    public StoryDataSeeder(StoryRepository storyRepository) {
         this.storyRepository = storyRepository;
     }
 

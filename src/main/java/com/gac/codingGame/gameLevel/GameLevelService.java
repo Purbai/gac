@@ -2,6 +2,7 @@ package com.gac.codingGame.gameLevel;
 
 import com.gac.codingGame.common.exceptions.BadRequestException;
 import com.gac.codingGame.gameLevel.dtos.CreateGameLevelDTO;
+import com.gac.codingGame.gameLevel.dtos.GameLevelResponseDTO;
 import com.gac.codingGame.gameLevel.entities.GameLevel;
 import com.gac.codingGame.common.ValidationErrors;
 import com.gac.codingGame.story.StoryService;
