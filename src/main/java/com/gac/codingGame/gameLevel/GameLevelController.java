@@ -14,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/gamelevel")
+@CrossOrigin(origins = "*")
 public class GameLevelController {
     public final GameLevelService gameLevelService;
     public final ModelMapper mapper;

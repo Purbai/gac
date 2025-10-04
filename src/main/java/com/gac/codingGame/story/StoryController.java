@@ -1,16 +1,14 @@
 package com.gac.codingGame.story;
 
 import com.gac.codingGame.story.entities.Story;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/story")
+@CrossOrigin(origins = "*")
 public class StoryController {
     public final StoryService storyService;
 

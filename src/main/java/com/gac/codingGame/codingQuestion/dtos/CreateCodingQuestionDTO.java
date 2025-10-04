@@ -1,7 +1,10 @@
 package com.gac.codingGame.codingQuestion.dtos;
 
-import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+
+import java.util.List;
+
 
 public class CreateCodingQuestionDTO {
     @NotBlank
@@ -14,31 +17,27 @@ public class CreateCodingQuestionDTO {
     private String functionName;
 
     @NotBlank
-    @Column(columnDefinition = "TEXT")
     private String starterCode;
 
     @NotBlank
-    @Column(columnDefinition = "TEXT")
     private String hints;
 
-    @NotBlank
-    @Column(columnDefinition = "TEXT[]")
-    private String[] examples;
+    @NotEmpty
+    private List<String> examples;
+
+    private String helperFunction;
 
     @NotBlank
-    @Column(columnDefinition = "TEXT")
     private String constraints;
 
     @NotBlank
-    @Column(columnDefinition = "TEXT")
     private String solution;
 
     @NotBlank
     private String difficulty;
 
-    @NotBlank
-    @Column(columnDefinition = "TEXT[]")
-    private String[] testCases;
+    @NotEmpty
+    private List<String> testCases;
 
     public String getQuestionTitle() {
         return questionTitle;
@@ -80,12 +79,20 @@ public class CreateCodingQuestionDTO {
         this.hints = hints;
     }
 
-    public String[] getExamples() {
+    public List<String> getExamples() {
         return examples;
     }
 
-    public void setExamples(String[] examples) {
+    public void setExamples(List<String> examples) {
         this.examples = examples;
+    }
+
+    public String getHelperFunction() {
+        return helperFunction;
+    }
+
+    public void setHelperFunction(String helperFunction) {
+        this.helperFunction = helperFunction;
     }
 
     public String getConstraints() {
@@ -112,11 +119,11 @@ public class CreateCodingQuestionDTO {
         this.difficulty = difficulty;
     }
 
-    public String[] getTestCases() {
+    public List<String> getTestCases() {
         return testCases;
     }
 
-    public void setTestCases(String[] testCases) {
+    public void setTestCases(List<String> testCases) {
         this.testCases = testCases;
     }
 }

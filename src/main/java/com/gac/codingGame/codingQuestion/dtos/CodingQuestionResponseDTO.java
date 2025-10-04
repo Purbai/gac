@@ -1,11 +1,15 @@
 package com.gac.codingGame.codingQuestion.dtos;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.validation.constraints.NotBlank;
+
+import java.util.List;
 
 public class CodingQuestionResponseDTO {
     private Long id;
     private String questionTitle;
+    @Column(columnDefinition = "TEXT")
     private String questionDesc;
     private String functionName;
     @Column(columnDefinition = "TEXT")
@@ -117,7 +121,7 @@ public class CodingQuestionResponseDTO {
         return testCases;
     }
 
-    public void setTestCases(String[] testCases) {
+    public void setTestCases(String[]testCases) {
         this.testCases = testCases;
     }
 }
